@@ -69,10 +69,11 @@ window.addEventListener('resize', handleScrollAnimations);
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const dropdown = document.querySelector(".dropdown");
+const body = document.body;
 
-// 点击汉堡按钮展开/收起菜单
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  body.classList.toggle('menu-open');
 });
 
 // 移动端点击 "Our products" 展开子菜单

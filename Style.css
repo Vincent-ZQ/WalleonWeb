@@ -98,29 +98,53 @@ body {
 /* ===== 移动端适配 ===== */
 @media (max-width: 768px) {
   .nav-links {
+    background: #222;
     position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
-    background: #111;
+    height: auto;
     flex-direction: column;
     align-items: center;
-    display: none; /* 默认收起 */
-    line-height: 50px;
-    height: auto;
+    top: 100%;
+    left: 0;
+    max-height: 0;
+    display: none;
+    gap: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.active {
+    max-height: 330px; /* 设一个大于菜单实际高度的值 */
+    display: flex;
   }
 
   .nav-links li {
-    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px 0; /* 增加点击区域 */
+  }
+
+  .nav-links li a {
+    display: flex;
+    height: 100%;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  /* 让页面内容跟着下移 */
+  .page-content {
+    transition: margin-top 0.3s ease;
+  }
+  .menu-open .page-content {
+    margin-top: 330px; /* 同 nav-links 高度 */
   }
 
   .hamburger {
-    display: block; /* 小屏幕显示 */
-  }
-
-  /* 点击展开时 */
-  .nav-links.active {
-    display: flex;
+    display: block; /* 显示汉堡按钮 */
   }
 
   /* 移动端下拉菜单 */
