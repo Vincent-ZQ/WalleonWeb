@@ -207,6 +207,7 @@ body {
   flex-direction: column;     /* Add this to stack h1 and slider vertically */
   align-items: center;        /* Add this to center horizontally */
   justify-content: center;    /* Add this to center vertically */
+  overflow: hidden;
 }
 
 .wgh-slider {
