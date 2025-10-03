@@ -66,6 +66,22 @@ window.addEventListener('scroll', handleScrollAnimations);
 // Handle resize events (in case viewport changes)
 window.addEventListener('resize', handleScrollAnimations);
 
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const dropdown = document.querySelector(".dropdown");
+
+// 点击汉堡按钮展开/收起菜单
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// 移动端点击 "Our products" 展开子菜单
+dropdown.addEventListener("click", (e) => {
+  if (window.innerWidth <= 768) {
+    e.preventDefault(); // 阻止默认跳转
+    dropdown.classList.toggle("open");
+  }
+});
 
 
 
