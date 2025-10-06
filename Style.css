@@ -9,6 +9,7 @@ body {
 
 .nav-bar-container {
   position: sticky;
+  height: 4rem;
   top: 0;
   width: 100%;
   z-index: 1000;

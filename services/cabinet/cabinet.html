@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <base href="/">
+    <link rel="stylesheet" href="services/cabinet/cabinet.css">
+    <link rel="stylesheet" href="../../nav_bar/nav_bar.css">
+    <link rel="stylesheet" href="../../footer/footer.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="navbar" class="nav-bar-container"></div>
+
+    <script>
+        fetch("../../nav_bar/nav_bar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+
+    <div class="gallery-container">
+        <h1>Our Exhibition Gallery</h1>
+        <p class="subtitle">Explore our collection of customizable cabinets. Designed up to your needs!</p>
+
+        <div class="gallery">
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet1.jpg')">
+                <img src="services/cabinet/cabinet1.jpg" alt="Mountain Landscape">
+                <div class="overlay">
+                    <h3>Sleek Minimalist Kitchen</h3>
+                    <p>A clean, modern kitchen with white and beige cabinet.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet2.jpg')">
+                <img src="services/cabinet/cabinet2.jpg" alt="Mountain Landscape">
+                <div class="overlay">
+                    <h3>Contemporary Black Kitchen</h3>
+                    <p>A stylish kitchen in matte black finishes with a functional L-shaped layout, emphasizing contrast
+                        and modern design.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet3.jpg')">
+                <img src="services/cabinet/cabinet3.jpg" alt="Mountain Landscape">
+                <div class="overlay">
+                    <h3>Marble Accent Kitchen</h3>
+                    <p>A kitchen featuring dark cabinetry with elegant marble backsplash and floating shelves for a
+                        luxurious touch.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet4.jpg')">
+                <img src="services/cabinet/cabinet4.jpg" alt="Mountain Landscape">
+                <div class="overlay">
+                    <h3>Modern Brown & Dark-style Kitchen</h3>
+                    <p>A sophisticated combination of brown and black cabinets with marble accents and integrated
+                        storage solutions.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet5.jpg')">
+                <img src="services/cabinet/cabinet5.jpg" alt="Forest Path">
+                <div class="overlay">
+                    <h3>Warm L-Shaped Kitchen</h3>
+                    <p>A cozy kitchen with brown cabinetry, large windows, and a minimalist design that balances
+                        function and style.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet6.jpg')">
+                <img src="services/cabinet/cabinet6.jpg" alt="Night Sky">
+                <div class="overlay">
+                    <h3>Bright-colored L-Shaped Kitchen</h3>
+                    <p>A spacious, light-filled kitchen with a mix of beige and brown cabinetry and thoughtful storage.
+                    </p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet7.jpg')">
+                <img src="services/cabinet/cabinet7.jpg" alt="Misty Landscape">
+                <div class="overlay">
+                    <h3>Contemporary Living Wall</h3>
+                    <p>A sleek interior wall design featuring cabinets, shelves, and textured stone elements for modern
+                        elegance.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal('services/cabinet/cabinet8.jpg')">
+                <img src="services/cabinet/cabinet8.jpg" alt="Forest Stream">
+                <div class="overlay">
+                    <h3>Luxurious Modern Bedroom</h3>
+                    <p>A serene bedroom with dark paneling, integrated lighting, and minimalist furnishings creating a
+                        cozy retreat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Full size image">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = 'block';
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+    <div class="footer" id="footer">
+        <div id="footer-content"></div>
+        <script>
+            fetch("footer/footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-content").innerHTML = data;
+                });
+        </script>
+    </div>
+</body>
+
+</html>

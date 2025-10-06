@@ -4,28 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Made Agency</title>
-  <link rel="stylesheet" href="contact_us.css">
+  <base href="/">
+  <link rel="stylesheet" href="contact_us/contact_us.css">
+  <link rel="stylesheet" href="../nav_bar/nav_bar.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">made</div>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li>
-        <a href="#">Our products</a>
-        
-        <div class="dropdown-content">
-          <a href="#">Wardrobe design</a>
-          <a href="#">Wall palette</a>
-        </div>
-      </li>
-      <li><a href="#">Project portfolio</a></li>
+  <!-- Navigation Bar -->
+  <div id="navbar" class="nav-bar-container"></div>
 
-      <li><a href="contact_us/contact_us.html">Contact us</a></li>
-    </ul>
-  </nav>
+  <script>
+    fetch("../nav_bar/nav_bar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
 
   <div class="company-title-container">
     <h1>Walleon - Your Creative Expert</h1>
@@ -35,7 +29,7 @@
   <section class="contact">
     <div class="contact-info">
       <h4>CONTACT</h4>
-      <h1>Let’s make something great together.</h1>
+      <h1>Let's make something great together.</h1>
       <p>Contact us to find out more about what we can offer your brand and business.</p>
       
       <address>

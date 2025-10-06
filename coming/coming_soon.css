@@ -1,0 +1,33 @@
+.coming-soon-page-content {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 4rem);
+    top: 4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.coming-soon-page-content h1 {
+    color: white;
+    font-size: 10rem;
+    margin-bottom: 20px;
+}
+
+.coming-soon-page-content p {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .coming-soon-page-content h1 {
+        font-size: 5rem;
+    }
+
+    .coming-soon-page-content p {
+        font-size: 1rem;
+    }
+    
+}

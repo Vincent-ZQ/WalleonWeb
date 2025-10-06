@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website with Navbar</title>
+  <base href="/">
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="/nav_bar/nav_bar.css">
+  <link rel="stylesheet" href="footer/footer.css">
 </head>
 
 <body>
@@ -194,14 +196,15 @@
       </div>
     </div>
 
-    <div id="contact-us-section" class="contact-us-container">
-      <h1 class="animated-heading scroll-trigger page_text">Get in touch</h1>
-      <p class="animated-heading scroll-trigger page_text">Ready to transform your space with Walleon? Contact us today
-        to discuss your furniture customization needs and schedule a consultation. Our team is eager to help you bring
-        your vision to life with expert craftsmanship and personalized service.</p>
-
-      <a href="contact_us\contact_us.html" class="contact-us animated-heading scroll-trigger page_text">Contact Us </a>
-    </div>
+  <div class="footer" id="footer">
+    <div id="footer-content"></div>
+    <script>
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-content").innerHTML = data;
+        });
+    </script>
   </div>
 
 

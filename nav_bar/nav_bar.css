@@ -19,15 +19,16 @@ a{
 
 header{
     position: sticky;
-    top: 0px;
     background-color: black;
+    top: 0px;
+    height: 4rem;
     width: 100%;
     z-index: 1000;
 }
 
 section{
     position: relative;
-    height: calc(100vh - 3rem);
+    height: calc(100vh - 4rem);
     width: 100%;
     background: url('bg.jpg') no-repeat top center / cover;
     overflow: hidden;
@@ -44,13 +45,15 @@ section{
 
 .nav-container{
     max-width: 90%;
+    min-width: 10rem;
     padding: 0 2rem;
     margin: 0 auto;
     display: flex;
     position: relative;
 }
 
-.logo-container{
+.nav-logo-container{
+    min-width: 12rem;
     flex: 1;
     display: flex;
     align-items: center;
@@ -74,15 +77,15 @@ section{
 
 .logo{
     color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    line-height: 3rem;
+    line-height: 4rem;
 }
 
 .logo span{
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .btn{
@@ -118,11 +121,12 @@ section{
 }
 
 .nav-link > a{
-    line-height: 3rem;
+    line-height: 4rem;
     color: #fff;
     padding: 0 1.1em;
     letter-spacing: 1px;
-    font-size: .95rem;
+    font-size: 1.3rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -310,7 +314,7 @@ section{
     .nav-btn{
         position: fixed;
         height: calc(100vh - 3rem);
-        top: 3rem;
+        top: 4rem;
         left: 0;
         width: 100%;
         background-color: #2a2a2a;
