@@ -1,173 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website with Navbar</title>
-  <link rel="stylesheet" href="Style.css" />
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="/nav_bar/nav_bar.css">
 </head>
+
 <body>
-
   <!-- Navigation Bar -->
-  <nav id="navbar" class="navbar">
-    <div id="navbar_logo" class="logo">Walleon AU</div>
+  <div id="navbar" class="nav-bar-container"></div>
 
-    <!-- 汉堡按钮（移动端才显示） -->
-    <div class="hamburger">☰</div>
+  <script>
+    fetch("nav_bar/nav_bar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
 
-    <!-- 导航菜单 -->
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li class="dropdown">
-        <a href="#">Our products ▾</a>
-        <div class="dropdown-content">
-          <a href="#">Wardrobe design</a>
-          <a href="#">Wall palette</a>
-        </div>
-      </li>
-      <li><a href="#">Project portfolio</a></li>
-      <li><a href="contact_us/contact_us.html">Contact us</a></li>
-    </ul>
-  </nav>
-
-  <div class = "page-content">
-      <div class="background-section">
-    <div class="background-title">Design your interior at Walleon</div>
-  </div>
-
-  <!-- Page content -->
-  <div style="padding:20px;">
-
-    <div id = "content-intro" class="two-column">
-
-      <div class="left">
-        <h3 class="animated-heading scroll-trigger page_text">Sydney & Newcastle's leading furniture customization experts</h3>
-        <h1 class="animated-heading scroll-trigger page_text">Where are the ideas coming from?</h1>
-
-        <div class="idea-image-container">
-          <img id="idea-image" src="Assets\home_page\idea1.jpg" alt="Idea Image" class="idea-image animated-heading scroll-trigger">
-        </div>
-      </div>
-      <div class="right">
-        <p class="animated-heading scroll-trigger page_text">Our ideas come from the blend of functionality, individuality, and natural inspiration. In wardrobe design and customization, we draw from lifestyle needs, fashion trends, and personal expression to create pieces that are both practical and unique. At the same time, our use of Travertine brings timeless elegance and texture to interior decoration, adding depth and sophistication. By combining customized design with natural beauty, we deliver solutions that balance practicality, artistry, and authenticity.</p>
-
-        <a href="contact_us\contact_us.html" class="contact-us animated-heading scroll-trigger page_text">Contact Us </a>
-
-      </div>
+  <div class="page-content">
+    <div class="background-section">
+      <div class="background-title">Design your interior at Walleon</div>
     </div>
 
-    <div id = "service-intro" class="two-column">
+    <!-- Page content -->
+    <div style="padding:20px;">
 
-      <div class="left">
-        <h3 class="animated-heading scroll-trigger page_text">Our services</h3>
-        <h1 class="animated-heading scroll-trigger page_text">How we can assist with your dream home?</h1>
+      <div id="content-intro" class="two-column">
+
+        <div class="left">
+          <h3 class="animated-heading scroll-trigger page_text">Sydney & Newcastle's leading furniture customization
+            experts</h3>
+          <h1 class="animated-heading scroll-trigger page_text">Where are the ideas coming from?</h1>
+
+          <div class="idea-image-container">
+            <img id="idea-image" src="Assets\home_page\idea1.jpg" alt="Idea Image"
+              class="idea-image animated-heading scroll-trigger">
+          </div>
+        </div>
+        <div class="right">
+          <p class="animated-heading scroll-trigger page_text">Our ideas come from the blend of functionality,
+            individuality, and natural inspiration. In wardrobe design and customization, we draw from lifestyle needs,
+            fashion trends, and personal expression to create pieces that are both practical and unique. At the same
+            time, our use of Travertine brings timeless elegance and texture to interior decoration, adding depth and
+            sophistication. By combining customized design with natural beauty, we deliver solutions that balance
+            practicality, artistry, and authenticity.</p>
+
+          <a href="contact_us\contact_us.html" class="contact-us animated-heading scroll-trigger page_text">Contact Us
+          </a>
+
+        </div>
       </div>
-      <div class="right">
-        <p class="animated-heading scroll-trigger page_text">At Walleon, we specialize in transforming your furniture dreams into reality. Whether you're looking to revamp a single piece or redesign an entire room, our team of skilled craftsmen and designers are here to help. With a keen eye for detail and a passion for quality, we ensure that every project we undertake is completed to the highest standards.</p>
 
+      <div id="service-intro" class="two-column">
+
+        <div class="left">
+          <h3 class="animated-heading scroll-trigger page_text">Our services</h3>
+          <h1 class="animated-heading scroll-trigger page_text">How we can assist with your dream home?</h1>
+        </div>
+        <div class="right">
+          <p class="animated-heading scroll-trigger page_text">At Walleon, we specialize in transforming your furniture
+            dreams into reality. Whether you're looking to revamp a single piece or redesign an entire room, our team of
+            skilled craftsmen and designers are here to help. With a keen eye for detail and a passion for quality, we
+            ensure that every project we undertake is completed to the highest standards.</p>
+
+        </div>
       </div>
-    </div>
 
-    <div class="container">
+      <div class="container">
 
-      <h1 class="animated-heading scroll-trigger">Our Product Gallery</h1>
-      <div class="wgh-slider">
-        <input class="wgh-slider-target" type="radio" id="slide-1" name="slider"/>
-        <input class="wgh-slider-target" type="radio" id="slide-2" name="slider"/>
-        <input class="wgh-slider-target" type="radio" id="slide-3" name="slider" checked="checked"/>
-        <input class="wgh-slider-target" type="radio" id="slide-4" name="slider"/>
-        <input class="wgh-slider-target" type="radio" id="slide-5" name="slider"/>
-        <input class="wgh-slider-target" type="radio" id="slide-6" name="slider"/>
-        <input class="wgh-slider-target" type="radio" id="slide-7" name="slider"/>
-        <div class="wgh-slider-viewport animated-heading scroll-trigger">
-          <div class="wgh-slider-viewbox">
-            <div class="wgh-slider-container">
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\product_slides\image-1.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-1" title="Show product 1"></label>
+        <h1 class="animated-heading scroll-trigger">Our Product Gallery</h1>
+        <div class="wgh-slider">
+          <input class="wgh-slider-target" type="radio" id="slide-1" name="slider" />
+          <input class="wgh-slider-target" type="radio" id="slide-2" name="slider" />
+          <input class="wgh-slider-target" type="radio" id="slide-3" name="slider" checked="checked" />
+          <input class="wgh-slider-target" type="radio" id="slide-4" name="slider" />
+          <input class="wgh-slider-target" type="radio" id="slide-5" name="slider" />
+          <input class="wgh-slider-target" type="radio" id="slide-6" name="slider" />
+          <input class="wgh-slider-target" type="radio" id="slide-7" name="slider" />
+          <div class="wgh-slider-viewport animated-heading scroll-trigger">
+            <div class="wgh-slider-viewbox">
+              <div class="wgh-slider-container">
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\product_slides\image-1.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-1" title="Show product 1"></label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-2.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-2" title="Show product 2"></label>
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-2.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-2" title="Show product 2"></label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-3.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-3" title="Show product 3"></label>
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-3.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-3" title="Show product 3"></label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-4.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-4" title="Show product 4"></label>
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-4.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-4" title="Show product 4"></label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-5" title="Show product 5"></label>
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-5" title="Show product 5"></label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-6" title="Show product 5"></label>
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-6" title="Show product 5"></label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-6" title="Show product 5"></label>
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-6" title="Show product 5"></label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="wgh-slider-item">
-                <div class="wgh-slider-item-inner">
-                  <figure class="wgh-slider-item-figure">
-                    <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg" alt="The 5th Exotic"/>
-                    <figcaption class="wgh-slider-item-figure-caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
-                    </figcaption>
-                  </figure>
-                  <label class="wgh-slider-item-trigger" for="slide-7" title="Show product 5"></label>
+                <div class="wgh-slider-item">
+                  <div class="wgh-slider-item-inner">
+                    <figure class="wgh-slider-item-figure">
+                      <img class="wgh-slider-item-figure-image" src="Assets\\product_slides\\image-5.jpg"
+                        alt="The 5th Exotic" />
+                      <figcaption class="wgh-slider-item-figure-caption"><a
+                          href="https://f4.bcbits.com/img/a3905613628_16.jpg">The 5th Exotic</a><span>Quantic</span>
+                      </figcaption>
+                    </figure>
+                    <label class="wgh-slider-item-trigger" for="slide-7" title="Show product 5"></label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -175,17 +193,19 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="contact-us-section" class="contact-us-container">
-    <h1 class="animated-heading scroll-trigger page_text">Get in touch</h1>
-    <p class="animated-heading scroll-trigger page_text">Ready to transform your space with Walleon? Contact us today to discuss your furniture customization needs and schedule a consultation. Our team is eager to help you bring your vision to life with expert craftsmanship and personalized service.</p>
+    <div id="contact-us-section" class="contact-us-container">
+      <h1 class="animated-heading scroll-trigger page_text">Get in touch</h1>
+      <p class="animated-heading scroll-trigger page_text">Ready to transform your space with Walleon? Contact us today
+        to discuss your furniture customization needs and schedule a consultation. Our team is eager to help you bring
+        your vision to life with expert craftsmanship and personalized service.</p>
 
-    <a href="contact_us\contact_us.html" class="contact-us animated-heading scroll-trigger page_text">Contact Us </a>
-  </div>
+      <a href="contact_us\contact_us.html" class="contact-us animated-heading scroll-trigger page_text">Contact Us </a>
+    </div>
   </div>
 
 
   <script src="action.js"></script>
 </body>
+
 </html>
