@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="/nav_bar/nav_bar.css">
   <link rel="stylesheet" href="footer/footer.css">
+  <link rel="stylesheet" href="blank_remark/blank_remark.css">
 </head>
 
 <body>
@@ -24,17 +25,47 @@
   </script>
 
   <div class="page-content">
-    <div class="background-section">
-      <div class="background-title">Design your interior at Walleon</div>
+
+    <div class="initial-background-container">
+      <div class="initial-background-img">
+        <img src="Assets/home_page/initial-background.png" alt="">
+      </div>
+
+      <div class="initial-background-overlay">
+
+      </div>
+
+      <div class="initial-background-text-container">
+        <h1 class="animated-heading scroll-trigger">Customized Cabinets & Bespoke joinery</h1>
+        <h3 class="animated-heading scroll-trigger">Boutique design fits your dream house - Personalized Designed for
+          your lifestyle and own space</h3>
+        <h4 class="animated-heading scroll-trigger">FREE Delivery & Installation provided. T&C apply*.</h4>
+      </div>
     </div>
 
+    <!---
+        <div class="background-section">
+      <div class="background-title">Design your interior at Walleon</div>
+    </div>
+    -->
+    <div class="opening-blank-remark" id="remark"></div>
+
+    <script>
+      fetch("blank_remark/blank_remark.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("remark").innerHTML = data;
+        });
+    </script>
+
     <!-- Page content -->
-    <div style="padding:20px;">
+    <div class="homepage-introduction" style="padding:0 10%;">
 
       <div id="content-intro" class="two-column">
 
         <div class="left">
-          <h3 class="animated-heading scroll-trigger page_text">Sydney & Newcastle's leading furniture customization
+          <h3 class="animated-heading scroll-trigger page_text" style="padding-bottom: 2rem;">Sydney & Newcastle's
+            leading furniture customization
             experts</h3>
           <h1 class="animated-heading scroll-trigger page_text">Where are the ideas coming from?</h1>
 
@@ -71,6 +102,21 @@
 
         </div>
       </div>
+    </div>
+
+    <div class="closing-blank-remark" id="closing-blank-remark"></div>
+
+    <script>
+      fetch("blank_remark/blank_remark.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("closing-blank-remark").innerHTML = data;
+        });
+    </script>
+
+
+    <div class="homepage-photos">
+
 
       <div class="homepage-photo-container">
 
@@ -79,7 +125,7 @@
           <input class="wgh-slider-target" type="radio" id="slide-1" name="slider" />
           <input class="wgh-slider-target" type="radio" id="slide-2" name="slider" />
           <input class="wgh-slider-target" type="radio" id="slide-3" name="slider" />
-          <input class="wgh-slider-target" type="radio" id="slide-4" name="slider" checked="checked"/>
+          <input class="wgh-slider-target" type="radio" id="slide-4" name="slider" checked="checked" />
           <input class="wgh-slider-target" type="radio" id="slide-5" name="slider" />
           <input class="wgh-slider-target" type="radio" id="slide-6" name="slider" />
           <input class="wgh-slider-target" type="radio" id="slide-7" name="slider" />
@@ -92,8 +138,8 @@
                     <figure class="wgh-slider-item-figure">
                       <img class="wgh-slider-item-figure-image" src="services/cabinet/cabinet1.jpg"
                         alt="Sleek Minimalist Kitchen" />
-                      <figcaption class="wgh-slider-item-figure-caption"><a
-                          href="services/cabinet/cabinet1.jpg">Sleek Minimalist Kitchen</a><span>Quantic</span>
+                      <figcaption class="wgh-slider-item-figure-caption"><a href="services/cabinet/cabinet1.jpg">Sleek
+                          Minimalist Kitchen</a><span>Quantic</span>
                       </figcaption>
                     </figure>
                     <label class="wgh-slider-item-trigger" for="slide-1" title="Show product 1"></label>
@@ -118,8 +164,8 @@
                     <figure class="wgh-slider-item-figure">
                       <img class="wgh-slider-item-figure-image" src="services/cabinet/cabinet3.jpg"
                         alt="The 5th Exotic" />
-                      <figcaption class="wgh-slider-item-figure-caption"><a
-                          href="services/cabinet/cabinet3.jpg">Marble Accent Kitchen</a><span>Quantic</span>
+                      <figcaption class="wgh-slider-item-figure-caption"><a href="services/cabinet/cabinet3.jpg">Marble
+                          Accent Kitchen</a><span>Quantic</span>
                       </figcaption>
                     </figure>
                     <label class="wgh-slider-item-trigger" for="slide-3" title="Show product 3"></label>
@@ -131,8 +177,8 @@
                     <figure class="wgh-slider-item-figure">
                       <img class="wgh-slider-item-figure-image" src="services/cabinet/cabinet4.jpg"
                         alt="The 5th Exotic" />
-                      <figcaption class="wgh-slider-item-figure-caption"><a
-                          href="services/cabinet/cabinet4.jpg">Modern Brown & Dark-style Kitchen</a><span>Quantic</span>
+                      <figcaption class="wgh-slider-item-figure-caption"><a href="services/cabinet/cabinet4.jpg">Modern
+                          Brown & Dark-style Kitchen</a><span>Quantic</span>
                       </figcaption>
                     </figure>
                     <label class="wgh-slider-item-trigger" for="slide-4" title="Show product 4"></label>
@@ -144,8 +190,8 @@
                     <figure class="wgh-slider-item-figure">
                       <img class="wgh-slider-item-figure-image" src="services/cabinet/cabinet5.jpg"
                         alt="The 5th Exotic" />
-                      <figcaption class="wgh-slider-item-figure-caption"><a
-                          href="services/cabinet/cabinet5.jpg">Warm L-Shaped Kitchen</a><span>Quantic</span>
+                      <figcaption class="wgh-slider-item-figure-caption"><a href="services/cabinet/cabinet5.jpg">Warm
+                          L-Shaped Kitchen</a><span>Quantic</span>
                       </figcaption>
                     </figure>
                     <label class="wgh-slider-item-trigger" for="slide-5" title="Show product 5"></label>
@@ -197,18 +243,18 @@
       </div>
     </div>
 
-  <div class="footer" id="footer">
-    <div id="footer-content"></div>
-    <script>
-      fetch("footer/footer.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("footer-content").innerHTML = data;
-        });
-    </script>
+    <div class="footer" id="footer">
+      <div id="footer-content"></div>
+      <script>
+        fetch("footer/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-content").innerHTML = data;
+          });
+      </script>
+    </div>
+
   </div>
-
-
   <script src="action.js"></script>
 </body>
 
