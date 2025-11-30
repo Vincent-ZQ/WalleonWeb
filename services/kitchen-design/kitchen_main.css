@@ -153,8 +153,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-
-
   flex-direction: row;
   /* items in a row */
   gap: 20px;
@@ -171,6 +169,19 @@
   /* 3 per row */
   height: auto;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .kitchen-main-photo-grid {
+    gap: 0;
+    /* space between items */
+    padding-bottom: 10px;
+  }
+
+  .photo-item {
+    width: 100%;
+    /* 2 per row on mobile */
+  }
 }
 
 .photo-item img {
@@ -230,4 +241,20 @@
   margin-bottom: 20px;
   font-family: "Arial";
   line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .description-content {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .description-content h2 {
+    font-size: 28px;
+  }
+
+  .description-content p {
+    font-size: 16px;
+  }
 }
