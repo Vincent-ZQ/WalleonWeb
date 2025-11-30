@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Navbar</title>
+  <base href="/">
+  <link rel="stylesheet" href="services/kitchen-design/kitchen_main.css">
+  <link rel="stylesheet" href="/nav_bar/nav_bar.css">
+  <link rel="stylesheet" href="footer/footer.css">
+  <link rel="stylesheet" href="blank_remark/blank_remark.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div id="navbar" class="nav-bar-container"></div>
+
+  <script>
+    fetch("nav_bar/nav_bar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+
+  <div class="page-wrapper">
+
+    <div class="main-content">
+      <div class="kitchen-main-intro">
+
+        <div class="left">
+          <h4>Spaces</h4>
+          <h2>Kitchen</h2>
+          <p>With a focus on exceptional materials and attention to detail, our modern design kitchens set the benchmark
+            for high quality manufacturing and innovative kitchen design.
+            Poliform Kitchens are made entirely in Italy, meaning we have accurate control of all stages of production;
+            from material selection right down to the finer details. Our team never quits in their continuous search for
+            materials that offer reliability, safety, durability, and complete versatility. We believe a truly great
+            kitchen makes for an extraordinary home. That’s why Poliform does everything to create a space that’s
+            coordinated, complete, and uniquely yours.</p>
+        </div>
+
+        <div class="right">
+          <div class="img-container">
+            <img src="/Assets/kitchen_main/main.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-sort-bar">
+
+        <div class="filters">
+          <span class="label">Refine by</span>
+          <a href="#" class="filter">Type</a>
+          <a href="#" class="filter">Availability</a>
+          <a href="#" class="filter">Designers</a>
+        </div>
+
+        <div class="sort">
+          <span class="label">Sort by</span>
+          <a href="#" class="filter">Featured</a>
+          <span class="arrow">⌄</span>
+        </div>
+
+      </div>
+
+      <div class="kitchen-photo-grid-wrapper">
+        <div class="kitchen-main-photo-grid" id="kitchen-main-photo-grid">
+          <!-- Photos will be dynamically inserted here -->
+        </div>
+      </div>
+      
+      <div class="description-wrapper">
+        <div class="description-content">
+          <h2>Discover Our Exquisite Kitchen Designs</h2>
+          <p>Explore our curated collection of kitchen designs that blend functionality with aesthetic appeal. Each design is crafted to inspire and elevate your culinary space, making it a true centerpiece of your home. From sleek modern styles to timeless classics, find the perfect kitchen that reflects your personal taste and lifestyle.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer" id="footer">
+    <div id="footer-content"></div>
+    <script>
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-content").innerHTML = data;
+        });
+    </script>
+  </div>
+
+  <script src="services/kitchen-design/kitchen_main.js"></script>
+</body>
+
+</html>

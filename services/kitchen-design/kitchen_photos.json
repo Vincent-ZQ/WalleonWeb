@@ -1,0 +1,7 @@
+[
+  { "src": "Assets/kitchen_main/kitchen_photo1.jpg", "name": "Sunset", "url": "www.google.com" },
+  { "src": "Assets/kitchen_main/kitchen_photo2.jpg", "name": "Mountains", "url": "www.google.com" },
+  { "src": "Assets/kitchen_main/kitchen_photo3.jpg", "name": "Beach", "url": "www.google.com" },
+  { "src": "Assets/kitchen_main/kitchen_photo4.jpg", "name": "Beach", "url": "www.google.com" },
+  { "src": "Assets/kitchen_main/kitchen_photo5.png", "name": "Beach", "url": "www.google.com" }
+]
