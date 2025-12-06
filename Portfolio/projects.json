@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Hotel Interiors",
+    "header": "Luxurious Hotel Interiors",
+    "header_image": "Assets/home_page/kitchen_image1.jpg",
+    "description": "Experience the epitome of luxury with our exquisite hotel interior designs that blend comfort and elegance seamlessly.",
+    "past_projects": [
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "image/111.test",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "image/222.test",
+        "link": "projects/oceanview_resort.html"
+      }
+    ]
+  },
+  {
+    "category": "Educational Interiors",
+    "header": "Luxurious Educational Interiors",
+    "header_image": "Assets/home_page/kitchen_image1.jpg",
+    "description": "In the education sector, we have been the pioneer and leader of China's future education space furniture. We advocate open learning and healthy learning, and bring creative and diversified experience to the education space through the design guidance of sinode. With the progress of the times, according to China's top ten education concepts, sinode has built a diversified education space furniture centered on students, and created a set of people-oriented, open and ecological education ecosystem. In the new era, sinode not only pays attention to design and concept, but also pays more attention to ecology and environmental protection. We use our concept to create a blue world for children.",
+    "past_projects": [
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "image/111.test",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "image/222.test",
+        "link": "projects/oceanview_resort.html"
+      }
+    ]
+  },
+  {
+    "category": "Health-care Interiors",
+    "header": "Luxurious Health-care Interiors",
+    "header_image": "Assets/home_page/kitchen_image1.jpg",
+    "description": "Experience the epitome of luxury with our exquisite health-care interior designs that blend comfort and elegance seamlessly.",
+    "past_projects": [
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "image/111.test",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "image/222.test",
+        "link": "projects/oceanview_resort.html"
+      }
+    ]
+  },
+  {
+    "category": "Residential Interiors",
+    "header": "Luxurious Residential Interiors",
+    "header_image": "Assets/home_page/kitchen_image1.jpg",
+    "description": "Experience the epitome of luxury with our exquisite residential interior designs that blend comfort and elegance seamlessly.",
+    "past_projects": [
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "image/111.test",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "image/222.test",
+        "link": "projects/oceanview_resort.html"
+      }
+    ]
+  }
+]

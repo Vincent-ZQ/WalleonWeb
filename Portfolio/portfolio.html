@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Walleon</title>
+  <base href="/">
+  <link rel="stylesheet" href="Portfolio/portfolio.css">
+  <link rel="stylesheet" href="../nav_bar/nav_bar.css">
+  <link rel="stylesheet" href="../footer/footer.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div id="navbar" class="nav-bar-container"></div>
+
+  <script>
+    fetch("../nav_bar/nav_bar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+
+  <div class="content-wrapper">
+
+    <div class="accordion">
+      <!-- <div class="accordion-item"> This is the old accordion design, js follows the current structure
+        <button class="accordion-board">
+          <div class="accordion-board-content">
+
+            <div class="left">
+              <h2>Our Projects</h2>
+              <p>Your content goes here.</p>
+            </div>
+
+            <div class="middle">
+
+            </div>
+
+            <div class="right">
+              <span class="accordion-icon">▼</span>
+            </div>
+
+
+          </div>
+        </button>
+      </div> -->
+    </div>
+
+    <div class="project-section-wrapper">
+      <div class="project-section-grid" id="project-section-grid">
+
+        <div class="grid-item">
+          <div class="img-container">
+            <img src="Assets/home_page/1f236672f79934919c60031ab71c2743.jpg" alt="">
+          </div>
+          <div class="info">
+            <h3>Coming Soon</h3>
+            <p>Stay tuned for updates on our latest projects!</p>
+          </div>
+        </div>
+
+
+        <div class="grid-item">
+          <div class="img-container">
+            <img src="Assets/home_page/1f236672f79934919c60031ab71c2743.jpg" alt="">
+          </div>
+          <div class="info">
+            <h3>Coming Soon</h3>
+            <p>Stay tuned for updates on our latest projects!</p>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="img-container">
+            <img src="Assets/home_page/1f236672f79934919c60031ab71c2743.jpg" alt="">
+          </div>
+          <div class="info">
+            <h3>Coming Soon</h3>
+            <p>Stay tuned for updates on our latest projects!</p>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="img-container">
+            <img src="Assets/home_page/1f236672f79934919c60031ab71c2743.jpg" alt="">
+          </div>
+          <div class="info">
+            <h3>Coming Soon</h3>
+            <p>Stay tuned for updates on our latest projects!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" id="footer">
+    <div id="footer-content"></div>
+    <script>
+      fetch("footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-content").innerHTML = data;
+        });
+    </script>
+  </div>
+
+  <script>
+    document.getElementById("project-section-grid").addEventListener("click", (event) => {
+      if (event.target.closest(".grid-item")) {
+        alert("Clicked: " + event.target.textContent);
+        grid_container = document.getElementById("project-section-grid");
+        grid_container.innerHTML = "";
+      }
+    });
+  </script>
+
+  <script src="Portfolio/portfolio.js"></script>
+</body>

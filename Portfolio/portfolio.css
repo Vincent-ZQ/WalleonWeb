@@ -1,0 +1,128 @@
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 40px;
+}
+
+.project-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  max-width: 1200px;
+  background-color: antiquewhite;
+}
+
+.project-section-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.project-section-grid .grid-item {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 25%;
+}
+
+.project-section-grid img {
+
+  display: flex;
+  max-width: 100%;
+}
+
+.accordion {
+  width: 90%;
+  border-top: 1px solid #ddd;
+  height: 100%;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  height: 100%;
+}
+
+/* BUTTON / HEADER */
+.accordion-board {
+  width: 100%;
+  background: #fff;
+  padding: 18px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-board-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.accordion-board-content .left
+{
+  display: flex;
+  flex: 2;
+  max-width: 20%;
+  flex: auto;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.accordion-board-content .left h2 {
+  font-size: 24px;
+}
+
+.accordion-board-content .left h4 {
+  font-family: "Times New Roman";
+  font-size: 18px;
+  padding: 10px 0 0 0;
+  font-weight: lighter;
+}
+
+.accordion-board-content .left img {
+  max-width: 80%;
+  height: 80%;
+  margin-top: 10px;
+}
+
+.accordion-board-content .middle {
+  display: flex;
+  flex: 8;
+  flex-direction: column;   /* Stack children vertically */
+  justify-content: center; /* Push children to the bottom */
+  align-items: flex-start;
+  width: 79.5%;
+  height: 100%;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.accordion-board-content .middle p {
+  margin: 0;                /* Remove default margins */
+  font-family: "Arial";
+  font-weight: lighter;
+  text-align: justify;
+  line-height: 200%;
+}
+
+
+.accordion-board .right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0.5;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}

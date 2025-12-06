@@ -1,0 +1,260 @@
+.page-wrapper {
+
+  overflow: hidden;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 5% 1% 5%;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial, sans-serif';
+  background-color: #f9f9f9;
+}
+
+.kitchen-main-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 70%;
+  min-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .kitchen-main-intro {
+    flex-direction: column;
+    width: 100%;
+    min-width: auto;
+    height: auto;
+  }
+
+  .kitchen-main-intro .left p {
+    font-size: 12px;
+    margin-top: 0;
+  }
+}
+
+.kitchen-main-intro h4 {
+  font-size: 15px;
+  color: grey;
+  font-family: "Arial";
+  margin-bottom: 20px;
+  font-weight: lighter;
+}
+
+.kitchen-main-intro h2 {
+  font-size: 60px;
+  color: black;
+  font-family: "Candara";
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.kitchen-main-intro p {
+  font-size: 20px;
+  color: #333;
+  font-family: "Arial";
+  line-height: 1.8;
+  margin-top: 20%;
+}
+
+.kitchen-main-intro .left,
+.kitchen-main-intro .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  height: 100%;
+}
+
+.img-container {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.img-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.filter-sort-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.filters,
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.label {
+  color: #000;
+  font-size: 14px;
+}
+
+.filter {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.filter::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+.arrow {
+  font-size: 12px;
+  color: #555;
+  margin-left: -10px;
+  /* tight match to screenshot */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .filter-sort-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+
+.kitchen-photo-grid-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.kitchen-main-photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  /* items in a row */
+  gap: 20px;
+  /* space between items */
+  padding-bottom: 10px;
+  /* optional spacing for scrollbar */
+}
+
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 20px);
+  /* 3 per row */
+  height: auto;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .kitchen-main-photo-grid {
+    gap: 0;
+    /* space between items */
+    padding-bottom: 10px;
+  }
+
+  .photo-item {
+    width: 100%;
+    /* 2 per row on mobile */
+  }
+}
+
+.photo-item img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+.photo-item .caption {
+  width: 100%;
+  display: inline-flex;
+  /* enables flex layout */
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.photo-item .caption span {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+.photo-item .caption a {
+  font-size: 12px;
+  color: grey;
+  font-family: "Arial";
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.description-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.description-content {
+  width: 60%;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  padding: 20px;
+}
+
+.description-content h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-family: "Candara";
+}
+
+.description-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Arial";
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .description-content {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .description-content h2 {
+    font-size: 28px;
+  }
+
+  .description-content p {
+    font-size: 16px;
+  }
+}
