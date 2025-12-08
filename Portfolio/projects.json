@@ -7,12 +7,62 @@
     "past_projects": [
       {
         "title": "Grand Royale Hotel",
-        "photo": "image/111.test",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/grand_royale.html"
       },
       {
         "title": "Oceanview Resort",
-        "photo": "image/222.test",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/oceanview_resort.html"
       }
     ]
@@ -21,16 +71,56 @@
     "category": "Educational Interiors",
     "header": "Luxurious Educational Interiors",
     "header_image": "Assets/home_page/kitchen_image1.jpg",
-    "description": "In the education sector, we have been the pioneer and leader of China's future education space furniture. We advocate open learning and healthy learning, and bring creative and diversified experience to the education space through the design guidance of sinode. With the progress of the times, according to China's top ten education concepts, sinode has built a diversified education space furniture centered on students, and created a set of people-oriented, open and ecological education ecosystem. In the new era, sinode not only pays attention to design and concept, but also pays more attention to ecology and environmental protection. We use our concept to create a blue world for children.",
+    "description": "Pioneered Chinese furniture design company that creates student-centered, eco-friendly, and open learning environments through innovative, future-focused education space design.",
     "past_projects": [
       {
         "title": "Grand Royale Hotel",
-        "photo": "image/111.test",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/grand_royale.html"
       },
       {
         "title": "Oceanview Resort",
-        "photo": "image/222.test",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/oceanview_resort.html"
+      },
+      {
+        "title": "Grand Royale Hotel",
+        "photo": "/Assets/coming_soon.png",
+        "link": "projects/grand_royale.html"
+      },
+      {
+        "title": "Oceanview Resort",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/oceanview_resort.html"
       }
     ]
@@ -43,12 +133,12 @@
     "past_projects": [
       {
         "title": "Grand Royale Hotel",
-        "photo": "image/111.test",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/grand_royale.html"
       },
       {
         "title": "Oceanview Resort",
-        "photo": "image/222.test",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/oceanview_resort.html"
       }
     ]
@@ -61,12 +151,12 @@
     "past_projects": [
       {
         "title": "Grand Royale Hotel",
-        "photo": "image/111.test",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/grand_royale.html"
       },
       {
         "title": "Oceanview Resort",
-        "photo": "image/222.test",
+        "photo": "/Assets/coming_soon.png",
         "link": "projects/oceanview_resort.html"
       }
     ]
