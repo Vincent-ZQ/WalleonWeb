@@ -4,7 +4,97 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  margin-top: 40px;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  background-color: black;
+}
+
+.page-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 90%;
+  min-height: 100%;
+  justify-content: center;
+}
+
+.page-header .page-header-wrapper .left {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  height: 100%;
+  padding-left: 10%;
+}
+
+.page-header .page-header-wrapper .right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.page-header .page-header-wrapper .right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header-wrapper h1 {
+  color: white;
+  font-size: 48px;
+  font-family: "Arial Black", sans-serif;
+  padding: 20% 0 10% 0%;
+}
+
+.page-header-wrapper h1 .line {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1s forwards;
+}
+
+.page-header-wrapper .left p {
+  color: white;
+  font-family: "IBM Flex Mono", monospace;
+  font-size: 18px;
+  font-weight: lighter;
+  text-size-adjust: 100%;
+  padding: 0 10% 0 0%;
+  line-height: 200%;
+}
+
+.page-header-wrapper .left button {
+  border-radius: 40px;
+  color: white;
+  width: 10%;
+  height: 40px;
+  border: white 2px solid;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+.page-header-wrapper .left button:hover {
+  background-color: #282833;
+  border: #282833 2px solid;
+}
+
+#header-line2 {
+  color: grey;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-section-wrapper {
@@ -37,10 +127,22 @@
   max-width: 100%;
 }
 
+.accordion-title {
+  margin: 5% 0 2% 0;
+  display: flex;
+  width: 90%;
+  align-items: flex-start;
+}
+
+.accordion-title h2 {
+  font-weight: lighter;
+}
+
 .accordion {
   width: 90%;
   border-top: 1px solid #ddd;
   height: 100%;
+  margin: 0 0 5% 0;
 }
 
 .accordion-item {
