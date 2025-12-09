@@ -15,6 +15,14 @@
   background-color: black;
 }
 
+.page-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
 .page-header-wrapper {
   display: flex;
   flex-direction: row;

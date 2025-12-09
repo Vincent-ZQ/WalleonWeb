@@ -1,8 +1,8 @@
 // Fetch JSON data and create photo grid
-fetch('services/kitchen-design/kitchen_photos.json')
+fetch('services/bedroom_wardrobe/bedroom_photos.json')
   .then(response => response.json())
   .then(data => {
-    const grid = document.getElementById('kitchen-main-photo-grid');
+    const grid = document.getElementById('bedroom-main-photo-grid');
     data.forEach(photo => {
       const item = document.createElement('div');
       item.classList.add('photo-item');

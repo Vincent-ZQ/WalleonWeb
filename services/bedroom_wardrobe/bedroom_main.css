@@ -14,7 +14,7 @@
   background-color: #f9f9f9;
 }
 
-.kitchen-main-intro {
+.bedroom-main-intro {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -25,20 +25,20 @@
 }
 
 @media (max-width: 768px) {
-  .kitchen-main-intro {
+  .bedroom-main-intro {
     flex-direction: column;
     width: 100%;
     min-width: auto;
     height: auto;
   }
 
-  .kitchen-main-intro .left p {
+  .bedroom-main-intro .left p {
     font-size: 12px;
     margin-top: 0;
   }
 }
 
-.kitchen-main-intro h4 {
+.bedroom-main-intro h4 {
   font-size: 15px;
   color: grey;
   font-family: "Arial";
@@ -46,7 +46,7 @@
   font-weight: lighter;
 }
 
-.kitchen-main-intro h2 {
+.bedroom-main-intro h2 {
   font-size: 60px;
   color: black;
   font-family: "Candara";
@@ -54,16 +54,17 @@
   font-weight: normal;
 }
 
-.kitchen-main-intro p {
+.bedroom-main-intro p {
   font-size: 20px;
   color: #333;
   font-family: "Arial";
+  text-align: justify;
   line-height: 1.8;
   margin-top: 20%;
 }
 
-.kitchen-main-intro .left,
-.kitchen-main-intro .right {
+.bedroom-main-intro .left,
+.bedroom-main-intro .right {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -143,13 +144,13 @@
 }
 
 
-.kitchen-photo-grid-wrapper {
+.bedroom-photo-grid-wrapper {
   width: 90%;
   display: flex;
   justify-content: center;
 }
 
-.kitchen-main-photo-grid {
+.bedroom-main-photo-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -172,7 +173,7 @@
 }
 
 @media (max-width: 768px) {
-  .kitchen-main-photo-grid {
+  .bedroom-main-photo-grid {
     gap: 0;
     /* space between items */
     padding-bottom: 10px;

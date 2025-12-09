@@ -8,7 +8,7 @@
   <base href="/">
   <link rel="stylesheet" href="services/bedroom_wardrobe/bedroom_main.css">
   <link rel="stylesheet" href="/nav_bar/nav_bar.css">
-  <link rel="stylesheet" href="footer/footer.css">
+  <link rel="stylesheet" href="/footer/footer.css">
   <link rel="stylesheet" href="blank_remark/blank_remark.css">
 </head>
 
@@ -27,23 +27,22 @@
   <div class="page-wrapper">
 
     <div class="main-content">
-      <div class="kitchen-main-intro">
+      <div class="bedroom-main-intro">
 
         <div class="left">
           <h4>Spaces</h4>
           <h2>Bedroom</h2>
-          <p>With a focus on exceptional materials and attention to detail, our modern design kitchens set the benchmark
-            for high quality manufacturing and innovative kitchen design.
-            Poliform Kitchens are made entirely in Italy, meaning we have accurate control of all stages of production;
-            from material selection right down to the finer details. Our team never quits in their continuous search for
-            materials that offer reliability, safety, durability, and complete versatility. We believe a truly great
-            kitchen makes for an extraordinary home. That’s why Poliform does everything to create a space that’s
+          <p>With a focus on exceptional materials and attention to detail, our modern design bedrooms set the benchmark
+            for high quality manufacturing and innovative bedroom design. Full scope interior design are available to
+            create bespoke bedroom solutions that reflect your personal style and enhance your living space. Our team never
+            quits in their continuous search for materials that offer reliability, safety, durability, and complete versatility. We believe a truly great
+            bedroom makes for an extraordinary home. That’s why Poliform does everything to create a space that’s
             coordinated, complete, and uniquely yours.</p>
         </div>
 
         <div class="right">
           <div class="img-container">
-            <img src="/Assets/kitchen_main/main.jpg" alt="">
+            <img src="/Assets/bedroom_main/main.png" alt="">
           </div>
         </div>
       </div>
@@ -65,16 +64,16 @@
 
       </div>
 
-      <div class="kitchen-photo-grid-wrapper">
-        <div class="kitchen-main-photo-grid" id="kitchen-main-photo-grid">
+      <div class="bedroom-photo-grid-wrapper">
+        <div class="bedroom-main-photo-grid" id="bedroom-main-photo-grid">
           <!-- Photos will be dynamically inserted here -->
         </div>
       </div>
       
       <div class="description-wrapper">
         <div class="description-content">
-          <h2>Discover Our Exquisite Kitchen Designs</h2>
-          <p>Explore our curated collection of kitchen designs that blend functionality with aesthetic appeal. Each design is crafted to inspire and elevate your culinary space, making it a true centerpiece of your home. From sleek modern styles to timeless classics, find the perfect kitchen that reflects your personal taste and lifestyle.</p>
+          <h2>Discover Our Exquisite bedroom Designs</h2>
+          <p>Explore our curated collection of bedroom designs that blend functionality with aesthetic appeal. Each design is crafted to inspire and elevate your culinary space, making it a true centerpiece of your home. From sleek modern styles to timeless classics, find the perfect bedroom that reflects your personal taste and lifestyle.</p>
         </div>
       </div>
 
@@ -82,18 +81,19 @@
   </div>
 
   <!-- Footer -->
-  <div class="footer" id="footer">
-    <div id="footer-content"></div>
-    <script>
-      fetch("footer/footer.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("footer-content").innerHTML = data;
-        });
-    </script>
-  </div>
+  <div id="footer-container"></div>
 
-  <script src="services/kitchen-design/kitchen_main.js"></script>
+  <script type="module" src="../../java_scripts/footer_drawer.js"></script>
+  <script type="module">
+    import { initFooter } from '../../java_scripts/footer_drawer.js';
+    initFooter({
+      containerId: "footer-container",
+      footerPath: "footer/footer.html",
+      slowFactor: 0.2
+    });
+  </script>
+
+  <script src="services/bedroom_wardrobe/bedroom_main.js"></script>
 </body>
 
 </html>

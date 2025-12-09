@@ -82,16 +82,15 @@
   </div>
 
   <!-- Footer -->
-  <div class="footer" id="footer">
-    <div id="footer-content"></div>
-    <script>
-      fetch("footer/footer.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("footer-content").innerHTML = data;
-        });
-    </script>
-  </div>
+  <div id="footer-container"></div>
+  <script type="module">
+    import { initFooter } from '../../java_scripts/footer_drawer.js';
+    initFooter({
+      containerId: "footer-container",
+      footerPath: "footer/footer.html",
+      slowFactor: 0.2
+    });
+  </script>
 
   <script src="services/kitchen-design/kitchen_main.js"></script>
 </body>

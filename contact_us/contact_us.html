@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
   <base href="/">
   <link rel="stylesheet" href="contact_us/contact_us.css">
   <link rel="stylesheet" href="../nav_bar/nav_bar.css">
+  <link rel="stylesheet" href="../footer/footer.css">
 </head>
+
 <body>
   <!-- Navbar -->
   <!-- Navigation Bar -->
@@ -21,65 +24,82 @@
       });
   </script>
 
-  <div class="company-title-container">
-    <h1>Walleon - Your Creative Expert</h1>
-  </div>
+  <section class="page-body">
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <div class="contact-info">
-      <h4>CONTACT</h4>
-      <h1>Let's make something great together.</h1>
-      <p>Contact us to find out more about what we can offer your brand and business.</p>
-      
-      <address>
-        6/172 - 176 Pacific Highway,<br>
-        Swansea NSW 2281, Australia<br>
-      </address>
-
-      <contacts>
-        Phone: 0414 056 462<br>
-        E-mail (Stanley Guo - Sales consultant): <a href="mailto:stanleywalleon@outlook.com">stanleywalleon@outlook.com</a><br>
-        E-mail (Vincent Wang - Sales Support): <a href="mailto:vincent.w.walleon@outlook.com">vincent.w.walleon@outlook.com</a>
-      </contacts>
-      <div class="socials">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <div class="company-title-container">
+      <h1>Walleon - Your Creative Expert</h1>
     </div>
 
-    <div class="contact-form">
-      <form id="form">
-        <input type="text" placeholder="Name*" required>
-        <input type="email" placeholder="Email*" required>
-        <input type="tel" placeholder="Phone">
-        <select>
-            <option>Please select your service</option>
-          <option>Web Design</option>
-          <option>Branding</option>
-          <option>Marketing</option>
-          <option>Other</option>
-        </select>
-        <select>
-            <option>Please select your budget range</option>
-          <option>30-50k</option>
-          <option>50-100k</option>
-          <option>100k+</option>
-        </select>
-        <textarea placeholder="Message*" required></textarea>
-        <div class="captcha">
-          <input type="checkbox" id="captcha"> I'm not a robot
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="contact-info">
+        <h4>CONTACT</h4>
+        <h1>Let's make something great together.</h1>
+        <p>Contact us to find out more about what we can offer your brand and business.</p>
+
+        <address>
+          6/172 - 176 Pacific Highway,<br>
+          Swansea NSW 2281, Australia<br>
+        </address>
+
+        <contacts>
+          Phone: 0414 056 462<br>
+          E-mail (Stanley Guo - Sales consultant): <a
+            href="mailto:stanleywalleon@outlook.com">stanleywalleon@outlook.com</a><br>
+          E-mail (Vincent Wang - Sales Support): <a
+            href="mailto:vincent.w.walleon@outlook.com">vincent.w.walleon@outlook.com</a>
+        </contacts>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <button type="submit">SUBMIT →</button>
-      </form>
-    </div>
+      </div>
+
+      <div class="contact-form">
+        <form id="form">
+          <input type="text" placeholder="Name*" required>
+          <input type="email" placeholder="Email*" required>
+          <input type="tel" placeholder="Phone">
+          <select>
+            <option>Please select your service</option>
+            <option>Web Design</option>
+            <option>Branding</option>
+            <option>Marketing</option>
+            <option>Other</option>
+          </select>
+          <select>
+            <option>Please select your budget range</option>
+            <option>30-50k</option>
+            <option>50-100k</option>
+            <option>100k+</option>
+          </select>
+          <textarea placeholder="Message*" required></textarea>
+          <div class="captcha">
+            <input type="checkbox" id="captcha"> I'm not a robot
+          </div>
+          <button type="submit">SUBMIT →</button>
+        </form>
+      </div>
+    </section>
+
   </section>
+
+  <div id="footer-container"></div>
+  <script type="module">
+    import { initFooter } from '../../java_scripts/footer_drawer.js';
+    initFooter({
+      containerId: "footer-container",
+      footerPath: "footer/footer.html",
+      slowFactor: 0.2
+    });
+  </script>
 
   <!-- FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <script src="contact_us.js"></script>
 </body>
+
 </html>
