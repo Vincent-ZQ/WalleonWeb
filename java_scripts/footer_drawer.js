@@ -23,25 +23,37 @@ export function initFooter(options = {}) {
             }
 
             const cuttingRatio = 1 / slowFactor;
+            const heightToBePulled = hiddenHeight * slowFactor;
 
             // Add padding-bottom dynamically
             document.body.style.paddingBottom = `${hiddenHeight}px`;
 
-            // Initial hidden transform
-            footer.style.transform = `translateY(${hiddenHeight / cuttingRatio}px)`;
-
             const scrollableHeight = document.body.scrollHeight - window.innerHeight;
-            const threshold = scrollableHeight - hiddenHeight / cuttingRatio / slowFactor;
+            const initialTranslatedY = hiddenHeight - heightToBePulled;
+            const threshold = scrollableHeight - hiddenHeight; // start sliding when near bottom
+
+            let initialTranslated = false;
 
             window.addEventListener("scroll", () => {
+                // Initial hidden transform
+
                 const scrollY = window.scrollY;
+
+                if (scrollY > scrollableHeight * 0.1 && initialTranslated == false) {
+                    // Footer starts fully below viewport
+                    footer.style.transform = `translateY(-${hiddenHeight}px)`; // fully hidden
+                    initialTranslated = true;
+                    footer.style.visibility = "visible";
+                }
 
                 if (scrollY >= threshold) {
                     const delta = scrollY - threshold;
-                    const translateY = Math.max(hiddenHeight / cuttingRatio - delta * slowFactor, 0);
-                    footer.style.transform = `translateY(${translateY}px)`;
+                    const translateY = Math.max(delta * slowFactor, 0);
+                    // starts at hiddenHeight, reduces toward 0
+                    footer.style.transform = `translateY(-${initialTranslatedY + translateY}px)`;
                 } else {
-                    footer.style.transform = `translateY(${hiddenHeight / cuttingRatio}px)`;
+                    // fully hidden
+                    footer.style.transform = `translateY(-${hiddenHeight - heightToBePulled}px)`;
                 }
             });
         })

@@ -38,36 +38,34 @@
       });
   </script>
 
-  <div class="initial-background-container">
-    <div class="initial-background-img">
-      <!-- <img src="Assets/home_page/initial-background.png" alt=""> -->
-      <video id="home-page-video" src="Assets/home_page/home_page_video1.mp4" autoplay loop muted
-        style="width: 100%; height: auto;"></video>
+  <div class="initial-background-container"">
+    <div class=" initial-background-img">
+    <!-- <img src="Assets/home_page/initial-background.png" alt=""> -->
+    <video id="home-page-video" src="Assets/home_page/home_page_video1.mp4" autoplay loop muted playsinline
+      style="width: 100%; height: auto;"></video>
 
-    </div>
+  </div>
 
-    <!-- <div class="initial-background-overlay">
+  <!-- <div class="initial-background-overlay">
 
     </div> -->
 
-    <div class="initial-background-text-container">
+  <div class="initial-background-text-container">
 
-      <div class="upper-title">
-        <h1 class="animated-heading scroll-trigger">Customized Cabinets & Bespoke joinery</h1>
-      </div>
-
-      <div class="lower-text">
-        <h3 class="animated-heading scroll-trigger">Boutique design fits your dream house - Personalized Designed for
-          your lifestyle and own space</h3>
-        <h4 class="animated-heading scroll-trigger">Delivery & Professional Installation is provided. T&C apply*.</h4>
-      </div>
-
+    <div class="upper-title">
+      <h1 class="animated-heading scroll-trigger">Customized Cabinets & Bespoke joinery</h1>
     </div>
+
+    <div class="lower-text">
+      <h3 class="animated-heading scroll-trigger">Boutique design fits your dream house - Personalized Designed for
+        your lifestyle and own space</h3>
+      <h4 class="animated-heading scroll-trigger">Delivery & Professional Installation is provided. T&C apply*.</h4>
+    </div>
+
+  </div>
   </div>
 
   <div class="page-content">
-
-
 
     <!---
         <div class="background-section">
@@ -313,20 +311,19 @@
 
 
 
+
   </div>
 
-  <div id="footer-container"></div>
+    <div id="footer-container""></div>
 
   <script type="module">
     import { initFooter } from '/java_scripts/footer_drawer.js';
     initFooter({
-      containerId: "footer-container",
-      footerPath: "footer/footer.html",
-      slowFactor: 0.3
+    containerId: "footer-container",
+    footerPath: "footer/footer.html",
+    slowFactor: 0.3
     });
   </script>
-
-  <script src="action.js"></script>
 
   <script>
     navBarContainer = document.querySelector(".nav-bar-container");
@@ -376,6 +373,18 @@
       } else {
         navBarHeader.classList.remove("scroll-transparent-initial-state");
       }
+    });
+  </script>
+
+
+
+  <script src="action.js"></script>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.body.style.visibility = "visible";
+      // const footer = document.getElementById("footer-container");
+      // footer.style.visibility = "visible";     // or footer.style.opacity = "1";
     });
   </script>
 
