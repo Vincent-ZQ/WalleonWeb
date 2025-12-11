@@ -21,29 +21,53 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
+
+        const navBarContainer = document.querySelector(".nav-bar-container");
+        const navBarHeader = navBarContainer.querySelector("header");
+        navBarHeader.classList.add("scroll-transparent-initial-state");
+
+        if (!navBarHeader) return;
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            navBarHeader.classList.remove("scroll-transparent-initial-state");
+          } else {
+            navBarHeader.classList.add("scroll-transparent-initial-state");
+          }
+        });
       });
   </script>
 
-  <div class="page-content">
+  <div class="initial-background-container">
+    <div class="initial-background-img">
+      <!-- <img src="Assets/home_page/initial-background.png" alt=""> -->
+      <video id="home-page-video" src="Assets/home_page/home_page_video1.mp4" autoplay loop muted
+        style="width: 100%; height: auto;"></video>
 
-    <div class="initial-background-container">
-      <div class="initial-background-img">
-        <!-- <img src="Assets/home_page/initial-background.png" alt=""> -->
-        <video src="Assets/home_page/home_page_video.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+    </div>
 
-      </div>
+    <!-- <div class="initial-background-overlay">
 
-      <div class="initial-background-overlay">
+    </div> -->
 
-      </div>
+    <div class="initial-background-text-container">
 
-      <div class="initial-background-text-container">
+      <div class="upper-title">
         <h1 class="animated-heading scroll-trigger">Customized Cabinets & Bespoke joinery</h1>
+      </div>
+
+      <div class="lower-text">
         <h3 class="animated-heading scroll-trigger">Boutique design fits your dream house - Personalized Designed for
           your lifestyle and own space</h3>
         <h4 class="animated-heading scroll-trigger">Delivery & Professional Installation is provided. T&C apply*.</h4>
       </div>
+
     </div>
+  </div>
+
+  <div class="page-content">
+
+
 
     <!---
         <div class="background-section">
@@ -291,18 +315,69 @@
 
   </div>
 
-      <div id="footer-container"></div>
+  <div id="footer-container"></div>
 
-    <script type="module">
-      import { initFooter } from '/java_scripts/footer_drawer.js';
-      initFooter({
-        containerId: "footer-container",
-        footerPath: "footer/footer.html",
-        slowFactor: 0.3
-      });
-    </script>
+  <script type="module">
+    import { initFooter } from '/java_scripts/footer_drawer.js';
+    initFooter({
+      containerId: "footer-container",
+      footerPath: "footer/footer.html",
+      slowFactor: 0.3
+    });
+  </script>
 
   <script src="action.js"></script>
+
+  <script>
+    navBarContainer = document.querySelector(".nav-bar-container");
+    const backgroundImgContainer = document.querySelector(".initial-background-container");
+    const video = document.getElementById("home-page-video");
+
+    function adjustLayout() {
+      // Resize background container according to navbar
+      const navBarHeight = navBarContainer.offsetHeight;
+      // backgroundImgContainer.style.height = (window.innerHeight - navBarHeight) + "px";
+
+      // Wait until video metadata is loaded before using videoWidth/videoHeight
+      if (video.videoWidth && video.videoHeight) {
+        const videoRatio = video.videoWidth / video.videoHeight;
+        const containerRatio = backgroundImgContainer.offsetWidth / backgroundImgContainer.offsetHeight;
+
+        if (videoRatio > containerRatio) {
+          // Video is wider → match container height
+          video.style.width = "auto";
+          video.style.height = "100%";
+        } else {
+          // Video is taller → match container width
+          video.style.width = "100%";
+          video.style.height = "auto";
+        }
+      }
+    }
+
+    // When video metadata is ready, do the first adjustment
+    video.addEventListener("loadedmetadata", adjustLayout);
+
+    // Initial call (in case metadata loads late)
+    window.addEventListener("load", adjustLayout);
+
+    // Recalculate on window resize
+    window.addEventListener("resize", adjustLayout);
+  </script>
+
+  <script>
+    const navBarContainer = document.querySelector(".nav-bar-container");
+    const navBarHeader = navBarContainer.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 50) {
+        navBarHeader.classList.add("scroll-transparent-initial-state");
+      } else {
+        navBarHeader.classList.remove("scroll-transparent-initial-state");
+      }
+    });
+  </script>
 
 </body>
 

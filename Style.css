@@ -8,7 +8,7 @@ body {
 }
 
 .nav-bar-container {
-  position: sticky;
+  position: fixed;
   height: 4rem;
   top: 0;
   width: 100%;
@@ -18,12 +18,27 @@ body {
 .initial-background-container,
 .initial-background-img {
   position: relative;
-  width: 100%;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.initial-background-img {
+  width: 100%;
+  height: 100%;
+}
+
+#home-page-video {
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .initial-background-img img {
@@ -41,7 +56,7 @@ body {
   background: linear-gradient(to bottom,
       rgb(84, 81, 76, 0.1) 0%,
       /* 顶部几乎透明 */
-      rgb(84, 81, 76, 0.6) 80%,
+      rgb(84, 81, 76, 0.6) 99%,
       /* 中间稍微深一点 */
       rgb(84, 81, 76, 0.9) 100%
       /* 底部最深 */
@@ -53,27 +68,36 @@ body {
   z-index: 9998;
   color: white;
   width: 70%;
-  height: 40%;
-  top: 60%;
+  height: 48%;
+  top: 50%;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .initial-background-text {
   padding: 1.5rem;
 }
 
+.initial-background-text-container .upper-title {
+  width: 100%;
+}
+
 .initial-background-text-container h1 {
-  font-size: 3.5rem;
+  text-align: center;
+  font-size: 3rem;
   padding: 2rem 0;
 }
 
 .initial-background-text-container h3 {
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding: .2rem 0;
 }
 
 .initial-background-text-container h4 {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 2px;
   padding: .4rem 0;

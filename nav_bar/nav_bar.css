@@ -19,11 +19,21 @@ a{
 
 header{
     position: sticky;
-    background-color: black;
     top: 0px;
     height: 4rem;
     width: 100%;
     z-index: 1000;
+
+    background-color: black;
+    transition: background-color 1s ease;
+}
+
+header.scroll-transparent-initial-state {
+    background-color: transparent;
+}
+
+header.scrolled {
+    background-color: red;
 }
 
 section{
