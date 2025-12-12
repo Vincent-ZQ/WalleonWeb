@@ -16,15 +16,29 @@
   <!-- Navigation Bar -->
   <div id="navbar" class="nav-bar-container"></div>
 
-  <script>
+  <script type="module">
+    import { initNavBarBgTransition } from '../../java_scripts/nav_bar_bg_transition.js';
     fetch("nav_bar/nav_bar.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
+
+        initNavBarBgTransition();
       });
   </script>
 
   <div class="page-wrapper">
+
+    <div class="initial-background-container"">
+        <!-- <img src=" Assets/home_page/initial-background.png" alt=""> -->
+      <video id="header-bg-video" src="Assets/bedroom_main/main_page_video.mp4" autoplay loop muted playsinline
+        style="width: 100%; height: auto;"></video>
+
+      <div class="initial-background-title">
+        <h2>The Heart Of Your Bedroom</h2>
+      </div>
+
+    </div>
 
     <div class="main-content">
       <div class="bedroom-main-intro">
@@ -34,8 +48,10 @@
           <h2>Bedroom</h2>
           <p>With a focus on exceptional materials and attention to detail, our modern design bedrooms set the benchmark
             for high quality manufacturing and innovative bedroom design. Full scope interior design are available to
-            create bespoke bedroom solutions that reflect your personal style and enhance your living space. Our team never
-            quits in their continuous search for materials that offer reliability, safety, durability, and complete versatility. We believe a truly great
+            create bespoke bedroom solutions that reflect your personal style and enhance your living space. Our team
+            never
+            quits in their continuous search for materials that offer reliability, safety, durability, and complete
+            versatility. We believe a truly great
             bedroom makes for an extraordinary home. That’s why Poliform does everything to create a space that’s
             coordinated, complete, and uniquely yours.</p>
         </div>
@@ -69,11 +85,14 @@
           <!-- Photos will be dynamically inserted here -->
         </div>
       </div>
-      
+
       <div class="description-wrapper">
         <div class="description-content">
           <h2>Discover Our Exquisite bedroom Designs</h2>
-          <p>Explore our curated collection of bedroom designs that blend functionality with aesthetic appeal. Each design is crafted to inspire and elevate your culinary space, making it a true centerpiece of your home. From sleek modern styles to timeless classics, find the perfect bedroom that reflects your personal taste and lifestyle.</p>
+          <p>Explore our curated collection of bedroom designs that blend functionality with aesthetic appeal. Each
+            design is crafted to inspire and elevate your culinary space, making it a true centerpiece of your home.
+            From sleek modern styles to timeless classics, find the perfect bedroom that reflects your personal taste
+            and lifestyle.</p>
         </div>
       </div>
 
@@ -91,6 +110,11 @@
       footerPath: "footer/footer.html",
       slowFactor: 0.2
     });
+  </script>
+
+  <script type="module">
+    import { initAdaptiveVideoRatio } from '../../java_scripts/adaptive_video_ratio.js';
+    initAdaptiveVideoRatio();
   </script>
 
   <script src="services/bedroom_wardrobe/bedroom_main.js"></script>

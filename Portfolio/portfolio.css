@@ -1,12 +1,15 @@
 .content-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  z-index: 10;
 }
 
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,6 +19,7 @@
 }
 
 .page-body {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

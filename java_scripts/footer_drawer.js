@@ -22,11 +22,10 @@ export function initFooter(options = {}) {
                 return;
             }
 
-            const cuttingRatio = 1 / slowFactor;
             const heightToBePulled = hiddenHeight * slowFactor;
 
             // Add padding-bottom dynamically
-            document.body.style.paddingBottom = `${hiddenHeight}px`;
+            footerContainer.style.minHeight = `${hiddenHeight}px`;
 
             const scrollableHeight = document.body.scrollHeight - window.innerHeight;
             const initialTranslatedY = hiddenHeight - heightToBePulled;
@@ -35,8 +34,6 @@ export function initFooter(options = {}) {
             let initialTranslated = false;
 
             window.addEventListener("scroll", () => {
-                // Initial hidden transform
-
                 const scrollY = window.scrollY;
 
                 if (scrollY > scrollableHeight * 0.1 && initialTranslated == false) {
@@ -49,11 +46,22 @@ export function initFooter(options = {}) {
                 if (scrollY >= threshold) {
                     const delta = scrollY - threshold;
                     const translateY = Math.max(delta * slowFactor, 0);
-                    // starts at hiddenHeight, reduces toward 0
-                    footer.style.transform = `translateY(-${initialTranslatedY + translateY}px)`;
+                    const currentTranslateY = initialTranslatedY + translateY;
+                    
+                    // Update transform
+                    footer.style.transform = `translateY(-${currentTranslateY}px)`;
+                    
+                    // 动态调整 z-index：当 footer 拉出超过 50% 时提升 z-index
+                    const pullProgress = translateY / initialTranslatedY; // 0 到 1
+                    if (pullProgress > 0.5) {
+                        footer.style.zIndex = "100000";
+                    } else {
+                        footer.style.zIndex = "0";
+                    }
                 } else {
                     // fully hidden
                     footer.style.transform = `translateY(-${hiddenHeight - heightToBePulled}px)`;
+                    footer.style.zIndex = "0"; // 隐藏时保持低 z-index
                 }
             });
         })

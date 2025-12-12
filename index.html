@@ -41,7 +41,7 @@
   <div class="initial-background-container"">
     <div class=" initial-background-img">
     <!-- <img src="Assets/home_page/initial-background.png" alt=""> -->
-    <video id="home-page-video" src="Assets/home_page/home_page_video1.mp4" autoplay loop muted playsinline
+    <video id="header-bg-video" src="Assets/home_page/home_page_video1.mp4" autoplay loop muted playsinline
       style="width: 100%; height: auto;"></video>
 
   </div>
@@ -314,7 +314,7 @@
 
   </div>
 
-    <div id="footer-container""></div>
+  <div id="footer-container""></div>
 
   <script type="module">
     import { initFooter } from '/java_scripts/footer_drawer.js';
@@ -325,41 +325,9 @@
     });
   </script>
 
-  <script>
-    navBarContainer = document.querySelector(".nav-bar-container");
-    const backgroundImgContainer = document.querySelector(".initial-background-container");
-    const video = document.getElementById("home-page-video");
-
-    function adjustLayout() {
-      // Resize background container according to navbar
-      const navBarHeight = navBarContainer.offsetHeight;
-      // backgroundImgContainer.style.height = (window.innerHeight - navBarHeight) + "px";
-
-      // Wait until video metadata is loaded before using videoWidth/videoHeight
-      if (video.videoWidth && video.videoHeight) {
-        const videoRatio = video.videoWidth / video.videoHeight;
-        const containerRatio = backgroundImgContainer.offsetWidth / backgroundImgContainer.offsetHeight;
-
-        if (videoRatio > containerRatio) {
-          // Video is wider → match container height
-          video.style.width = "auto";
-          video.style.height = "100%";
-        } else {
-          // Video is taller → match container width
-          video.style.width = "100%";
-          video.style.height = "auto";
-        }
-      }
-    }
-
-    // When video metadata is ready, do the first adjustment
-    video.addEventListener("loadedmetadata", adjustLayout);
-
-    // Initial call (in case metadata loads late)
-    window.addEventListener("load", adjustLayout);
-
-    // Recalculate on window resize
-    window.addEventListener("resize", adjustLayout);
+  <script type = "module">
+    import { initNavBarBgTransition } from '/java_scripts/nav_bar_bg_transition.js';
+    initNavBarBgTransition();
   </script>
 
   <script>

@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 .initial-background-img {
@@ -32,7 +33,7 @@ body {
   height: 100%;
 }
 
-#home-page-video {
+#header-bg-video {
 
   width: 100vw;
   height: 100vh;
@@ -66,11 +67,11 @@ body {
 
 .initial-background-text-container {
   position: absolute;
-  z-index: 9998;
+  z-index: 1;
   color: white;
   width: 70%;
   height: 48%;
-  top: 50%;
+  top: 45%;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -102,6 +103,11 @@ body {
   font-weight: 400;
   letter-spacing: 2px;
   padding: .4rem 0;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
 }
 
 .background-section {
