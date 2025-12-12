@@ -82,6 +82,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
     flex: 1;
 }
 

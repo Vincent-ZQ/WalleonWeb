@@ -16,15 +16,29 @@
   <!-- Navigation Bar -->
   <div id="navbar" class="nav-bar-container"></div>
 
-  <script>
+  <script type="module">
+    import { initNavBarBgTransition } from '../../java_scripts/nav_bar_bg_transition.js';
     fetch("nav_bar/nav_bar.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
+
+        initNavBarBgTransition();
       });
   </script>
 
   <div class="page-wrapper">
+
+    <div class="initial-background-container"">
+        <!-- <img src=" Assets/home_page/initial-background.png" alt=""> -->
+      <video id="header-bg-video" src="Assets/kitchen_main/kitchen_main_video.mp4" autoplay loop muted playsinline
+        style="width: 100%; height: auto;"></video>
+
+      <div class="initial-background-title">
+        <h2>The Warmest Place in Your Home</h2>
+      </div>
+
+    </div>
 
     <div class="main-content">
       <div class="kitchen-main-intro">
@@ -90,6 +104,11 @@
       footerPath: "footer/footer.html",
       slowFactor: 0.2
     });
+  </script>
+
+  <script type="module">
+    import { initAdaptiveVideoRatio } from '../../java_scripts/adaptive_video_ratio.js';
+    initAdaptiveVideoRatio();
   </script>
 
   <script src="services/kitchen-design/kitchen_main.js"></script>

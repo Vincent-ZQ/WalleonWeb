@@ -4,6 +4,53 @@
   z-index: 10;
 }
 
+.nav-bar-container {
+  position: fixed;
+  height: 4rem;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.initial-background-container {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#header-bg-video {
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.initial-background-title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 50%;
+  top: 45%;
+}
+
+.initial-background-title h2 {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  font-family: "Candara";
+  font-weight: bold;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
