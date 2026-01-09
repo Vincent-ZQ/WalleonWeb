@@ -22,20 +22,6 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
-
-        const navBarContainer = document.querySelector(".nav-bar-container");
-        const navBarHeader = navBarContainer.querySelector("header");
-        navBarHeader.classList.add("scroll-transparent-initial-state");
-
-        if (!navBarHeader) return;
-
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 50) {
-            navBarHeader.classList.remove("scroll-transparent-initial-state");
-          } else {
-            navBarHeader.classList.add("scroll-transparent-initial-state");
-          }
-        });
       });
   </script>
 
@@ -319,31 +305,21 @@
 
   <script type="module">
     import { initFooter } from '/java_scripts/footer_drawer.js';
+
+    import { initNavBarBgTransition } from '/java_scripts/nav_bar_bg_transition.js';
+
+
     initFooter({
     containerId: "footer-container",
     footerPath: "footer/footer.html",
     slowFactor: 0.3
     });
-  </script>
 
-  <script type = "module">
-    import { initNavBarBgTransition } from '/java_scripts/nav_bar_bg_transition.js';
+
     initNavBarBgTransition();
   </script>
 
-  <script>
-    const navBarContainer = document.querySelector(".nav-bar-container");
-    const navBarHeader = navBarContainer.querySelector("header");
 
-    window.addEventListener("scroll", () => {
-
-      if (window.scrollY > 50) {
-        navBarHeader.classList.add("scroll-transparent-initial-state");
-      } else {
-        navBarHeader.classList.remove("scroll-transparent-initial-state");
-      }
-    });
-  </script>
 
 
 
