@@ -61,14 +61,16 @@ export async function initFooter(options = {}) {
       window.addEventListener("scroll", () => {
         const scrollY = getScrollY();
 
-              console.log(
-        "Container initial → x:%s y:%s w:%s h:%s",
-        footer.getBoundingClientRect().left.toFixed(1),
-        footer.getBoundingClientRect().top.toFixed(1),
-        footer.getBoundingClientRect().width.toFixed(1),
-        footer.getBoundingClientRect().height.toFixed(1)
-      );
-      
+        console.log(
+          "Container initial → x:%s y:%s w:%s h:%s, scrollableHeight:%s scrollY:%s",
+          footer.getBoundingClientRect().left.toFixed(1),
+          footer.getBoundingClientRect().top.toFixed(1),
+          footer.getBoundingClientRect().width.toFixed(1),
+          footer.getBoundingClientRect().height.toFixed(1),
+          scrollableHeight.toFixed(1),
+          scrollY.toFixed(1)
+        );
+
         if (scrollY > scrollableHeight * 0.1 && !initialTranslated) {
           footer.style.transform = `translate3d(0, ${hiddenHeight}px, 0)`;
           initialTranslated = true;
